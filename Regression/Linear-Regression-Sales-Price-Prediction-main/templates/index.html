@@ -1,0 +1,30 @@
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+<center>
+  <div class="login">
+  <h2>SALES PREDICTION</H2>
+     <!-- Main Input For Receiving Query to our ML -->
+   <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="ValueforTV" placeholder="Enter the Value for TV" required="required" />
+
+        <button type="submit" class="button button2">Predict</button>
+    </form>
+
+   <br>
+   <br>
+
+   {{ prediction_text }}
+
+ </div>
+ </center>
+
+
+</body>
+</html>
